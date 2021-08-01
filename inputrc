@@ -1,0 +1,23 @@
+# Map Up and Down arrow to allow search for completions to the current line from your history    
+"\e[B": history-search-forward
+"\e[A": history-search-backward
+
+# Flip through autocompletion matches with Shift-Tab
+"\e[Z": menu-complete
+
+# Map control-d to kill the whole line
+"\C-d": kill-whole-line
+
+# Make Tab autocomplete regardless of filename case
+#set completion-ignore-case on
+
+# Allow UTF-8 input and output
+#set input-meta on
+#set ouput-meta on
+#set convert-meta off
+
+# Immediately show the completion list
+set show-all-if-ambiguous on
+#set show-all-if-unmodified on
+
+
