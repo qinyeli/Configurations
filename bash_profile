@@ -103,6 +103,7 @@ alias x-='chmod -x'
 alias count='ls | wc -l'
 alias fuck='sudo $(history -p \!\!)'
 alias mysudo='sudo -E env "PATH=$PATH"'
+alias blaze='bazel'
 
 function extract {
   if [ -z "$1" ]; then
