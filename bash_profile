@@ -80,6 +80,9 @@ function prompt_command {
   local WHITEBOLD="\[\033[1;37m\]"
   local RESETCOLOR="\[\e[00m\]"
 
+  local SELECTED=$CYAN
+  local SELECTED=$CYANBOLD
+
   local VIRTUAL=""
   if [ ! -z $VIRTUAL_ENV ];
     then VIRTUAL="(virtual) ";
@@ -89,8 +92,8 @@ function prompt_command {
   #export PS1="\u@\w\[$(tput sgr0)\]"
   # \u  username
   # \w  directory
-  export PS1="\n$GREEN\u $GREENBOLD$VIRTUAL$GREEN@ \w \
-    $GREENBOLD\$(git branch 2> /dev/null)\n $GREEN[\#] → $RESETCOLOR"
+  export PS1="\n$SELECTED\u $SELECTEDBOLD$VIRTUAL$SELECTED@ \w \
+    $SELECTEDBOLD\$(git branch 2> /dev/null)\n $SELECTED[\#] → $RESETCOLOR"
 }
 
 PROMPT_COMMAND=prompt_command
